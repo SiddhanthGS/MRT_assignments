@@ -24,7 +24,7 @@ class ImagePublishing(Node):
         while True:
                 isTrue,frame= capture.read()  
                 x=x+1
-                #cv2.imshow('video',frame)
+                cv2.imshow('video',frame)
                 msg =bridge.cv2_to_imgmsg(frame)
                 self.image_capturer_.publish(msg)
                 
