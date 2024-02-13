@@ -20,10 +20,10 @@ class ImagePublishing(Node):
         capture=cv2.VideoCapture(0)
         print(capture.isOpened())
         bridge=CvBridge()
-        x=0
+        
         while True:
                 isTrue,frame= capture.read()  
-                x=x+1
+                
                 cv2.imshow('video',frame)
                 msg =bridge.cv2_to_imgmsg(frame)
                 self.image_capturer_.publish(msg)
